@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "4d135883-daf4-4020-88ad-d93f42ae4ee2",
+		"name": "Drive2Driveway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Lookups",
+			"item": [
+				{
+					"name": "VehicleMake",
+					"item": [
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer JNryOFbn9ERoh2sfWHbo3UR6Sbuii5PFGuPejW0u",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{WEBAPI_URL}}/{{API_VERSION_PREFIX}}/vehicle/makes",
+									"host": [
+										"{{WEBAPI_URL}}"
+									],
+									"path": [
+										"{{API_VERSION_PREFIX}}",
+										"vehicle",
+										"makes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\": \"umairmalhi@outlook.com\", \"password\": \"admin123\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WEBAPI_URL}}/{{API_VERSION_PREFIX}}/auth/login",
+							"host": [
+								"{{WEBAPI_URL}}"
+							],
+							"path": [
+								"{{API_VERSION_PREFIX}}",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Umair Malhi\", \"email\": \"umairmalhi@outlook.com\", \"password\": \"admin123\", \"confirm_password\": \"admin123\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WEBAPI_URL}}/{{API_VERSION_PREFIX}}/auth/register",
+							"host": [
+								"{{WEBAPI_URL}}"
+							],
+							"path": [
+								"{{API_VERSION_PREFIX}}",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "WEBAPI_URL",
+			"value": "https://localhost/drive2driveway/drive2driveway-webapi/public"
+		},
+		{
+			"key": "API_VERSION_PREFIX",
+			"value": "api/v1"
+		}
+	]
+}
